@@ -1,15 +1,12 @@
 package config;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.Browser;
 
-public class BaseDriver {
-
-    public static WebDriver driver = initDriverChrome();
-
-    private  static  WebDriver initDriverChrome() {
-        WebDriver webDriver = new ChromeDriver();
-        webDriver.manage().window().minimize();
-        return new ChromeDriver();
+public interface BaseDriver {
+    //    WebDriver createDriver(Browser browser);
+    public static WebDriver initDriverChrome() {
+        return null;
     }
+
 }
