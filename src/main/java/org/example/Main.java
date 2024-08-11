@@ -1,14 +1,12 @@
 package org.example;
 
 import config.BaseDriverImpl;
-import java.security.Key;
 import java.time.Duration;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -34,7 +32,7 @@ public class Main extends BaseDriverImpl {
                 try {
                     driver.findElement(By.id("onetrust-reject-all-handler")).click();
                 } catch (Exception e) {
-                    System.out.println("Кнопка отказа от куки не найдена.");
+                    System.out.println("Reject button not found");
                 }
 
                 WebElement dropdownList = driver.findElement(By.cssSelector(DROPDOWNLIST));
